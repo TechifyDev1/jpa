@@ -23,6 +23,8 @@ public class JpaApplication {
 
 			repository.save(person2);
 			Person saved = repository.findById(person2.getId()).orElseThrow(NoSuchElementException::new);
+			System.out.println(saved.getId());
+			System.out.println(saved.getName());
 		};
 	}
 
