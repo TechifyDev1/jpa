@@ -21,6 +21,7 @@ public class JpaApplication {
 			Person person2 = new Person();
 			person2.setName("John");
 
+			// 	Saves the given entity.
 			repository.save(person2);
 			Person saved = repository.findById(person2.getId()).orElseThrow(NoSuchElementException::new);
 			System.out.println(saved.getId());
